@@ -5,6 +5,21 @@
           </small>
       </h2>
   </div>
+
+  <div class="btn btn-grp">
+  	<a class= "btn btn-default" href="<%= link.url %>">Visit Link</a>
+  	<%= link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
+  		<span class="glyphicon glyphicon-chevron-up"></span>
+  		Upvote
+  		<%= link.get_upvotes.size%>
+  	<% end %>
+
+  	<%= link_to dislike_link_path(link), method: :put, class: "btn btn-default btn-sm" do%>
+  		<span class="glyphicon glyphicon-chevron-down"></span>
+  		Downvote
+  		<%= link.get_downvotes.size%>
+  	<% end %>
+  </div>
 <% end %>
 
 
