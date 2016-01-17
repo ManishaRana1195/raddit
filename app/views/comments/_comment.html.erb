@@ -2,7 +2,7 @@
 	<div class="comments-wrapper clearfix">
 		<div class="pull-left">
 			<p class="lead"><%= comment.body %></p>
-			<p> <small> Submitted <strong> <%= time_ago_in_words(comment.created_at) %> </strong> by <strong><%= comment.user.email %></strong></small></p>
+			<p> <small> Submitted <strong> <%= time_ago_in_words(comment.created_at) %> </strong> by <strong><%= comment.user.name %></strong></small></p>
 		</div>
 	<div class="btn-grp pull-right">
 	<%if comment.user == current_user %>
